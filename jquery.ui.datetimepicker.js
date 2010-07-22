@@ -707,7 +707,7 @@ $.extend($.ui, { datetimepicker: { version: "1.0.0"} });
                 try {
 
                     //Date-Time-Picker
-                    var date = new Date(inst.input.val());
+                    var date = new Date(formatDate(inst.input.val()));
                     if (date != "NaN") {
                         date.setYear($.datetimepicker._DetermineYear(date.getYear()));
                         if (date) { // only if valid
@@ -1115,7 +1115,7 @@ $.extend($.ui, { datetimepicker: { version: "1.0.0"} });
             if (value == '')
                 return null;
 
-            var dte = new Date(value);
+            var dte = new Date(fomatDate(value));
             dte.setYear(this._DetermineYear(dte.getYear()));
 
             if (dte == "NaN") {
